@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="iniciotesla.css">
+  <link rel="icon" href="tesla-icon.ico" type="image/x-icon">
+  <link rel="background" href="Logo-Tesla.jpg" type="image">
+
+  <title>Sua Página</title>
+</head>
+<body style="background: url('Logo-Tesla.jpg') no-repeat center center fixed; background-size: cover; font-family: Arial, sans-serif; margin: 0; padding: 20px; box-sizing: border-box;">
+  <button id="menu-btn" onclick="toggleButtons()">Menu</button>
+
+
+<div class="sidebar-container">
+  <button id="close-btn" onclick="toggleButtons()">Menu</button>
+  <div class="sidebar">
+    <a href="Tesla_Model_Y.html">
+      <div class="sidebar-item">
+        <img src="tesla-model-y.png" alt="tesla-model-y">
+        <span>Tesla Model Y</span>
+      </div>
+    </a>
+    <a href="Tesla_Model_3.html">
+      <div class="sidebar-item">
+        <img src="tesla-model-3.png" alt="tesla-model-3">
+        <span>Tesla Model 3</span>
+      </div>
+    </a>
+    <a href="Tesla_Model_X.html">
+      <div class="sidebar-item">
+        <img src="tesla-model-x.png" alt="tesla-model-x">
+        <span>Tesla Model X</span>
+      </div>
+    </a>
+    <a href="Tesla_Model_S.html">
+      <div class="sidebar-item">
+        <img src="tesla-model-s.png" alt="tesla-model-s">
+        <span>Tesla Model S</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+  <script>
+    function toggleButtons() {
+      var menuBtn = document.getElementById("menu-btn");
+      var closeBtn = document.getElementById("close-btn");
+
+      var sidebar = document.querySelector(".sidebar");
+      document.body.classList.toggle("sidebar-open");
+      if (sidebar.style.width === "250px") 
+      {
+        sidebar.style.width = "0";
+        menuBtn.style.opacity = 1;
+        closeBtn.style.opacity = 0;
+      } 
+      else 
+      {
+        sidebar.style.width = "250px";
+        menuBtn.style.opacity = 0;
+        closeBtn.style.opacity = 1;
+      }
+    }
+  </script>
+</body>
+</html>
